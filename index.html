@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bg: #f1f1f1;
+            --b: #010101;
+            --w: #ffffff;
+        }
+
+        .body {
+            background: var(--bg);
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        p {
+            color: var(--w);
+            font-size: 32px;
+            font-family: "Times New Roman", serif;
+        }
+
+        .divider {
+            width: 70%;
+            height: 1px;
+            background: grey;
+            position: absolute;
+            left: 15%;
+            top: 138%;
+        }
+
+        .name {
+            color: transparent;
+            -webkit-text-stroke: 3px var(--b);
+            font-size: 200px;
+            left: 50%;
+            top: -40%;
+            position: absolute;
+            transform: translateX(-50%) translateY(0%);
+            animation: fadeup 1s ease-in-out forwards;
+        }
+        
+        img {
+            width: 50%;
+            position: absolute;
+        }
+
+        .red {
+            left: 50%;
+            transform: translateX(-50%);
+            animation: fade 1s ease-in-out forwards;
+            top: 19px;
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(150px) translateX(-50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(100px) translateX(-50%);
+            }
+        }
+
+        @keyframes fadeup {
+            from {
+                opacity: 0;
+                transform: translateY(-150px) translateX(-50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(100px) translateX(-50%);
+            }
+        }
+
+        .portfolio {
+            color: var(--b);
+            -webkit-text-stroke: 4px var(--bg);
+            font-size: 180px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50px);
+            top: 63.5%;
+            animation: fadeup 1s ease-in-out forwards;
+            mix-blend-mode: difference;
+        }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .icon:hover .red:hover{
+            transform: scale(1.2) translateY(-20%);
+            transition: 0.3s;
+        }
+
+        .box {
+            width: 80%;
+            height: 80%;
+            background: linear-gradient(to right, #0089fa, #0089fa93);
+            position: absolute;
+            left: 10%;
+            top: 70%;
+            border: 1px solid var(--b);
+            border-radius: 20px;
+            justify-content: center;
+        }
+
+        .mohnish {
+            color: var(--bg);
+            font-size: 100px;
+            position: absolute;
+            left: 30%;
+            transform: translateX(-50%);
+            top: -10%;
+            text-shadow: 0px 0px 10px var(--bg);
+        }
+
+        .stand {
+            position: absolute;
+            width: 40%;
+            top: -32.5%;
+            left: 90%;
+            transform: translateX(60%) translateY(-10%);
+            animation: faderight 1s ease-in-out forwards;
+            transition: all 0.3s;
+        }
+
+        @keyframes faderight {
+            from {
+                opacity: 0;
+                transform: translateY(100px) translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(100px) translateX(-50%);
+            }
+        }
+
+        .me {
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+            top: 30%;
+            font-size: 38px;
+            color: var(--w);
+            text-shadow: 0px 0px 5px var(--bg);
+        }
+
+        .rec {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 80%;
+            height: 80%;
+            background: transparent;
+            position: absolute;
+            left: 10%;
+            top: 140%;
+            border-radius: 20px;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+            height: 80%;
+            background: transparent;
+            position: absolute;
+            left: 10%;
+            top: 110%;
+            border-radius: 20px;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .skill .code:hover {
+            transform: scale(1.055);
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px var(--bg);
+        }
+
+        .code {
+            display: grid;
+            width: 500px;
+            height: 225px;
+            color: var(--b);
+            font-size: 50px;
+            border-radius: 20px;
+            position: relative;
+            background: linear-gradient(to right, #0089fa, #0089fa93);
+        }
+
+        .order {
+            position: absolute;
+            left: 20%;
+            top: 0%;
+            transform: translateX(-50%) translateY(-50%);
+            text-shadow: 0px 0px 10px var(--bg);
+            color: var(--w);
+            font-size: 40px;
+        }
+
+        .des {
+            position: absolute;
+            font-size: 20px;
+            left: 30%;
+            top: 40%;
+            transform: translateX(-30%) translateY(-50%);
+            text-shadow: 0px 0px 10px var(--bg);
+        }
+
+        .pro {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            color: var(--b);
+            font-size: 50px;
+            border-radius: 20px;
+            position: relative;
+            background: linear-gradient(to right, #0089fa, #0089fa93);
+        }
+
+        .game {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .game:hover {
+            transform: scale(1.055) translateX(-50%) translateY(-55%);
+            transition: 0.3s;
+        }
+
+        .sit {
+            position: absolute;
+            width: 40%;
+            top: 150%;
+            left: -15%;
+            transform: translateX(60%) translateY(-10%);
+        }
+
+        .gmail {
+            position: absolute;
+            width: 8%;
+            top: 186.5%;
+            left: 48%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .email {
+            position: absolute;
+            font-size: 32px;
+            top: 176.7%;
+            left: 50%;
+            color: var(--bg);
+            background: linear-gradient(to right, #0089fa, #0089fa93);
+            padding: 10px;
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        .insta {
+            position: absolute;
+            width: 5%;
+            top: 215.5%;
+            left: 53%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .in {
+            position: absolute;
+            font-size: 32px;
+            top: 230.5%;
+            left: 50.5%;
+            color: var(--bg);
+            background: linear-gradient(to right, #0089fa, #0089fa93);
+            padding: 10px;
+            border-radius: 0px 20px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <h1 class="name">MOHNISH</h1>
+        <img src="red.png" alt="MOHNISH" class="red">
+        <h1 class="portfolio">PORTFOLIO</h1>
+    </section>
+
+    <hr class="divider">
+
+    <section id="about">
+        <h1 class="name" style="position: absolute; top: 0%; z-index: 100;">About</h1>
+        <div class="box">
+            <h3 class="mohnish">MOHNISH</h3>
+            <img src="stand.png" alt="Mohnish" class="stand">
+            <p class="me">I'm Mohnish, a first-year student at Jeppiaar Engineering College. I'm an aspiring Web Developer and Designer, passionate about creating modern, responsive, and user-friendly websites.</p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+        <h1 class="name" style="position: absolute; top: 30%; z-index: 100;">Skills</h1>
+        <div class="skill">
+            <div class="code"><p class="order">Python</p><p class="des">Familiar with the fundamentals of Python and programming logic, with a focus on writing clean and efficient code.</p></div>
+            <div class="code"><p class="order">Html/Css</p><p class="des">Proficient in creating responsive and visually appealing websites using HTML and CSS.</p></div>
+            <div class="code"><p class="order">Framer</p><p class="des">Experienced in using Framer to create interactive prototypes and animations.</p></div>
+            <div class="code"><p class="order">Photoshop</p><p class="des">Skillful in using Photoshop for graphic design and image editing.</p></div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="projects">
+        <h1 class="name" style="position: absolute; top: 60%; z-index: 100;">Projects</h1>
+        <div class="rec">
+            <div class="pro"><a href="https://itzmohnish.github.io/Gameopia/"><img src="Designer.png" alt="Gameopia" class="game"></a></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="name" style="position: absolute; top: 90%; z-index: 100;">Contact</h1>
+        <img src="sit.png" alt="Mohnish" class="sit">
+        <a href="mailto:s.mohnish45@gmail.com"><img src="png (1).png" alt="mail" class="gmail"><p class="email">s.mohnish45@gmail.com</p></a>
+        <a href="https://www.instagram.com/itzmohnish/"><img src="png (2).png" alt="instagram" class="insta"><p class="email" style="top: 206%; left: 55.3%;">itzmohnish</p></a>
+        <a href="https://www.linkedin.com/in/mohnish-s-1b5baa392/"><img src="png (3).png" alt="linkedin" class="insta" style="left: 48%; top: 240%;"><p class="in">Mohnish</p></a>
+    </section>
+
+    <hr class="divider">
+</body>
+
+</html>
